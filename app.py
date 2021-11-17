@@ -13,7 +13,8 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    title = "Noureddine is getting familiar with flask"
+    return render_template('index.html', title=title)
 
 @app.route('/about')
 def about():
@@ -25,6 +26,6 @@ def bootstrap():
 
 
 if __name__ == '__main__':
-    # app.jinja_env.auto_reload = True
+    app.jinja_env.auto_reload = True
     app.run()
 
