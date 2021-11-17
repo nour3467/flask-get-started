@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
@@ -24,6 +24,10 @@ def about():
 @app.route('/bootstrap')
 def bootstrap():
     return render_template('bootstrap.html')
+
+@app.route('/subscribe')
+def subscribe():
+    return render_template('subscribe.html')
 
 
 if __name__ == '__main__':
