@@ -14,16 +14,16 @@ title = "Noureddine ft. flask"
 
 @app.route('/')
 def index():
-    return render_template('index.html', title=title)
+    return render_template('index.html')
 
 @app.route('/about')
 def about():
     list_names = ["Noureddine", "Ayoub", "Meryam", "Siham"]
-    return render_template('about.html', title=title, names=list_names)
+    return render_template('about.html', names=list_names)
 
 @app.route('/bootstrap')
 def bootstrap():
-    return render_template('bootstrap.html',title=title)
+    return render_template('bootstrap.html')
 
 
 if __name__ == '__main__':
