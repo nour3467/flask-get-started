@@ -13,16 +13,18 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/')
 def index():
-    title = "Noureddine is getting familiar with flask"
+    title = "Noureddine ft. flask"
     return render_template('index.html', title=title)
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    title = "Noureddine ft. flask"
+    return render_template('about.html', title=title)
 
 @app.route('/bootstrap')
 def bootstrap():
-    return render_template('bootstrap.html')
+    title = "Noureddine ft. flask"
+    return render_template('bootstrap.html',title=title)
 
 
 if __name__ == '__main__':
