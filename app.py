@@ -10,20 +10,19 @@ app.config['DEBUG'] = True
 app.config['TESTING'] = True
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
+title = "Noureddine ft. flask"
 
 @app.route('/')
 def index():
-    title = "Noureddine ft. flask"
     return render_template('index.html', title=title)
 
 @app.route('/about')
 def about():
-    title = "Noureddine ft. flask"
-    return render_template('about.html', title=title)
+    list_names = ["Noureddine", "Ayoub", "Meryam", "Siham"]
+    return render_template('about.html', title=title, names=list_names)
 
 @app.route('/bootstrap')
 def bootstrap():
-    title = "Noureddine ft. flask"
     return render_template('bootstrap.html',title=title)
 
 
