@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
 from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
@@ -28,6 +28,12 @@ def bootstrap():
 @app.route('/subscribe')
 def subscribe():
     return render_template('subscribe.html')
+
+@app.route('/form_att', methods=["POST"])
+def subscribe_done():
+    email = request.form.get("email")
+    password = request.form.get("password")
+    return render_template('form_att.html', email=email, password=password)
 
 
 if __name__ == '__main__':
