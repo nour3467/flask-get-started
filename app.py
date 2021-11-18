@@ -30,7 +30,7 @@ def subscribe():
     return render_template('subscribe.html')
 
 @app.route('/form_att', methods=["POST"])
-def subscribe_done():
+def form_att():
     email = request.form.get("email")
     password = request.form.get("password")
     return render_template('form_att.html', email=email, password=password)
