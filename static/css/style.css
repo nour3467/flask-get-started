@@ -1,6 +1,20 @@
 
 
-html
+h3
 {
-    background-color: bisque;
+    color:red;
+    background:black;
+    margin: auto;
+    padding: 10px 0px
+}
+
+body
+{
+    background: darkblue;
+}
+
+img
+{
+    width:300px;
+    margin: 50% 50%;
 }

@@ -1,5 +1,6 @@
 
-@import "style.css";
+
+
 
 {% extends "base.html" %}
 {##}
@@ -10,7 +11,8 @@
 {% block content %}
 
 <div id="the_centred_title" style="width:350px">
-    <h3 style="color:red; background:black;margin: auto;padding: 10px 0px"><center>This Is The Home Page</center> </h3>
+    <h3><center>This Is The Home Page</center> </h3>
+    <center><img src="{{ url_for("static", filename="images/perso_image.jpg") }}"></center>
 </div>
 
 {% endblock %}
